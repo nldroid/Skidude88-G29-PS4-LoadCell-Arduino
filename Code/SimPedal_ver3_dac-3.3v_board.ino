@@ -53,6 +53,7 @@ void setup()
   // of the pedal. It is important not to apply any force to the pedal
   // While this is happening
   brake_pedal.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
+  // when using one load cell, use this code: brake_pedal.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN,64);
   brake_pedal.tare(BRAKE_PEDAL_LOAD_CELL_TARE_REPS);
   
   Wire.begin();                       // Begins the I2C communication
